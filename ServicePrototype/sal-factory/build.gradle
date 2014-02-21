@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            project(':discovery-services-http'),
+
+            [group: 'org.oclc.web',              name: 'request-formats',        version: project.oclcRequestFormatsVersion],
+            [group: 'org.apache.httpcomponents', name: 'httpcore',               version: project.httpClientVersion],
+            [group: 'org.apache.httpcomponents', name: 'httpclient',             version: project.httpClientVersion],
+            [group: 'com.sun.jersey.contribs',   name: 'jersey-apache-client4',  version: project.jerseyVersion],
+            [group: 'com.sun.jersey',            name: 'jersey-json',            version: project.jerseyVersion],
+            [group: 'com.sun.jersey',            name: 'jersey-client',          version: project.jerseyVersion],
+            [group: 'com.sun.jersey',            name: 'jersey-core',            version: project.jerseyVersion],
+    )
+
+    testCompile(
+            [group: 'org.codehaus.groovy', name: 'groovy-all', version: project.groovyVersion, classifier: project.groovyClassifier],
+            [group: 'org.slf4j', name: 'slf4j-simple',   version: project.slf4jVersion],
+            [group: 'org.slf4j', name: 'jcl-over-slf4j', version: project.slf4jVersion]
+    )
+}

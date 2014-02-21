@@ -1,0 +1,11 @@
+<plugin name='foundation' version='5.0.3' grailsVersion='1.3 &gt; *'>
+  <title>Foundation CSS Framework for Grails</title>
+  <description>Provides the Foundation CSS framework resources. Foundation is an easy to use, powerful, and flexible framework for building prototypes and production code on any kind of device.
+It integrates nicely with the resources plugin.
+</description>
+  <documentation>http://grails.org/plugin/foundation</documentation>
+  <type>FoundationGrailsPlugin</type>
+  <resources>
+    <resource>FoundationResources</resource>
+  </resources>
+</plugin>
